@@ -126,10 +126,11 @@
         <!-- <h1>ग. दि. माडगुळकर</h1> -->
         <div class="author-image">
             <img src="image.png" alt="ग. दि. माडगुळकर">
-            <p>(१ ऑक्टोबर १९१९ - १४ डिसेंबर १९७७)</p>
+            
         </div>
 
         <div id="marathi-content">
+            <p>(१ ऑक्टोबर १९१९ - १४ डिसेंबर १९७७)</p>
             <p>“आधुनिक वाल्मिकी” हि सन्मान पदवीं पुरस्कृत गजानन दिगंबर माडगुळकर हे मराठीतील प्रख्यात कवी, पटकथा – संवाद लेखक व अभिनेते होते. त्यांच्या गीत रामायणाने किर्तीचा कळस गाठला. “ पद्मश्री” पुरस्कार सन्मान ग. दि. माडगुळकर यांच्या अनेक पुस्तकांना महाराष्ट्र शासनाची पारितोषिके मिळाली. महाराष्ट्र व मराठी भाषेवर त्यांचेअनंत उपकार आहेत.</p>
 
             <h2>महत्वाचे साहित्यिक योगदान:</h2>
@@ -167,9 +168,9 @@
             if (isMarathi) {
                 // Switch to English
                 translateBtn.textContent = "मराठी ";
-                // Add your English translation here
-                // This is just a sample translation
+                document.documentElement.lang = "en";
                 marathiContent.innerHTML = `
+                    <p>(1 October 1919 - 14 December 1977)</p>              
                     <p>"Modern Valmiki" honor degree recipient Gajanan Digambar Madgulkar was a renowned Marathi poet, screenplay-dialogue writer, and actor. His Geet Ramayana reached the pinnacle of fame. Many of G. D. Madgulkar's books received Maharashtra Government awards. He has made infinite contributions to Maharashtra and Marathi language.</p>
 
                     <h2>Important Literary Contributions:</h2>
@@ -199,6 +200,7 @@
                 `;
             } else {
                 // Switch back to Marathi
+                document.documentElement.lang = "mr";
                 location.reload();
             }
             isMarathi = !isMarathi;

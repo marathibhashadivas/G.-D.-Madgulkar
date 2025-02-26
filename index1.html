@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ग. दि. माडगुळकर माहिती</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-image: url('i.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .content-container {
+            max-width: 92%;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .author-image {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .author-image img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .author-image img:hover {
+            transform: scale(1.05);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li:before {
+            content: "•";
+            color: #4CAF50;
+            font-weight:bold;
+            position: absolute;
+            left: 0;
+            height: 10px;
+        }
+
+        .translate-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .translate-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 15px;
+            }
+
+            .translate-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-container {
+                padding: 10px;
+            }
+
+            .translate-btn {
+                padding: 8px 15px;
+                font-size: 22px;
+            }
+
+            h1, h2, h3 {
+                font-size: 1.2em;
+            }
+
+            .author-image img {
+                max-width: 100%;
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <!-- <h1>ग. दि. माडगुळकर</h1> -->
+        <div class="author-image">
+            <img src="image.png" alt="ग. दि. माडगुळकर">
+        </div>
+
+        <div id="marathi-content">
+            <p>“आधुनिक वाल्मिकी” हि सन्मान पदवीं पुरस्कृत गजानन दिगंबर माडगुळकर हे मराठीतील प्रख्यात कवी, पटकथा – संवाद लेखक व अभिनेते होते. त्यांच्या गीत रामायणाने किर्तीचा कळस गाठला. “ पद्मश्री” पुरस्कार सन्मान ग. दि. माडगुळकर यांच्या अनेक पुस्तकांना महाराष्ट्र शासनाची पारितोषिके मिळाली. महाराष्ट्र व मराठी भाषेवर त्यांचेअनंत उपकार आहेत.</p>
+
+            <h2>महत्वाचे साहित्यिक योगदान:</h2>
+            <h3>लहान कथा:</h3>
+            <p>मंत्रालेले दिवे (राज्य पुरस्कार)</p>
+
+            <h3>कविता संग्रह:</h3>
+            <ul>
+                <li>जोगिया (राज्य पुरस्कार)</li>
+                <li>चैत्रबन (राज्य पुरस्कार)</li>
+                <li>गी</li>
+            </ul>
+            <h3>बालसाहित्य:</h3>
+            <ul>
+                <li>दे ताली ग घे ताली (केंद्रीय पुरस्कार)</li>
+                <li>मिनी (राज्य पुरस्कार)</li>
+            </ul>
+            <h3>पुरस्कार:</h3>
+            <ul>
+                <li>१९५७ संगीत नाटक अकादमी पुरस्कार नाटकलेखनात उत्कृष्टता</li>
+                <li>१९६९ पद्मश्री</li>
+                <li>१९७१ विष्णुदास भावे पुरस्कार</li>
+            </ul>
+        </div>
+
+        <button class="translate-btn">English </button>
+    </div>
+
+    <script>
+        const translateBtn = document.querySelector(".translate-btn");
+        const marathiContent = document.getElementById("marathi-content");
+        let isMarathi = true;
+
+        translateBtn.addEventListener("click", function() {
+            if (isMarathi) {
+                // Switch to English
+                translateBtn.textContent = "मराठी ";
+                // Add your English translation here
+                // This is just a sample translation
+                marathiContent.innerHTML = `
+                    <p>"Modern Valmiki" honor degree recipient Gajanan Digambar Madgulkar was a renowned Marathi poet, screenplay-dialogue writer, and actor. His Geet Ramayana reached the pinnacle of fame. Many of G. D. Madgulkar's books received Maharashtra Government awards. He has made infinite contributions to Maharashtra and Marathi language.</p>
+
+                    <h2>Important Literary Contributions:</h2>
+                    <h3>Short Stories:</h3>
+                    <p>Mantralele Dive (State Award)</p>
+
+                    <h3>Poetry Collections:</h3>
+                    <ul>
+                        <li>Jogiya (State Award)</li>
+                        <li>Chaitraban (State Award)</li>
+                        <li>Geet Ramayan</li>
+                        <li>Don Nrutya Natika (State Award)</li>
+                    </ul>
+
+                    <h3>Children's Literature:</h3>
+                    <ul>
+                        <li>De Tali Ga Ghe Tali (Central Award)</li>
+                        <li>Mini (State Award)</li>
+                    </ul>
+
+                    <h3>Awards:</h3>
+                    <ul>
+                        <li>1957 Sangeet Natak Academy Award for Excellence in Playwriting</li>
+                        <li>1969 Padmashri</li>
+                        <li>1971 Vishnudas Bhave Award</li>
+                    </ul>
+                `;
+            } else {
+                // Switch back to Marathi
+                location.reload();
+            }
+            isMarathi = !isMarathi;
+        });
+    </script>
+</body>
+</html>
